@@ -135,7 +135,7 @@ class SRQ {
 					request_obj.response = response;
 					srq.fallback_request(srq, request_obj, callback);
 				} else {
-					finish_request(request_obj, response, false, false, true);
+					srq.finish_request(request_obj, response, false, false, true);
 					srq.next(callback);
 					callback(request_obj);
 				}
